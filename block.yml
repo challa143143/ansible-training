@@ -1,0 +1,15 @@
+---
+ - hosts: all
+   become: no
+   gather_facts: yes
+   tasks:
+     - name: instal the apache
+
+       block:
+        - name: install httpd and memcached
+          ansible.builtin.yum:
+            name:
+            - httpd
+            - memcached
+            state: present
+

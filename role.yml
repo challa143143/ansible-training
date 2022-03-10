@@ -1,0 +1,8 @@
+---
+- name: Role demo
+  hosts: localhost
+  tasks:
+   - name: Inculde Role
+     include_role:
+      name: test-role
+

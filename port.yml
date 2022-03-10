@@ -1,0 +1,8 @@
+- hosts: localhost
+  tasks:
+  - name: do permit traffic in default zone on port 8081/tcp
+    firewalld:
+      port: 8081/tcp
+      permanent: yes
+      state: enabled
+

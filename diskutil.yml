@@ -1,0 +1,11 @@
+---
+ - name: check disk util
+   hosts: all
+   become: true
+   tasks:
+     - name: check disk util
+       command: df -h
+       register: space
+     -  debug:
+         var: space
+

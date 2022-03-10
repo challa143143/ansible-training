@@ -1,0 +1,9 @@
+---
+ - hosts: localhost
+   become: yes
+   tasks:
+      - name: appending data
+        lineinfile:
+          path: /root/dinesh/abc.yml
+          line: hi all
+
